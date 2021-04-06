@@ -1,9 +1,9 @@
 <template>
-  <footer>
-    <b-row>
+  <b-row>
+    <b-col lg="12">
       Created by wamartz @2021
-    </b-row>
-  </footer>
+    </b-col>
+  </b-row>
 </template>
 
 <script>

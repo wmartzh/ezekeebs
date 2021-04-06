@@ -1,13 +1,13 @@
 <template>
-  <div>
+  <b-container fluid>
     <MainNav></MainNav>
     <div class="container">
       <router-view></router-view>
     </div>
     <MainFooter>
-      
+
     </MainFooter>
-  </div>
+  </b-container>
 </template>
 
 <script>
