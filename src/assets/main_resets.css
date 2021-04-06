@@ -3,9 +3,12 @@
   margin: 0;
 }
 body {
+  width: 100%;
   font-family: "Lora", serif;
+  background-color: #f3f3f6 !important;
 }
 
-body h1,h2 {
+body h1,
+h2 {
   font-family: "Source Code Pro", monospace;
 }
