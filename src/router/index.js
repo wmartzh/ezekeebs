@@ -7,6 +7,8 @@ import Groupbuys from '../pages/Groupbuys.vue'
 import Switches from '../pages/Switches.vue'
 import Keycaps from '../pages/Keycaps.vue'
 import Cases from '../pages/Cases.vue'
+import ProductDetail from '../pages/ProductDetail.vue'
+import About from '../pages/About.vue'
 
 const routes = [
 {
@@ -48,6 +50,16 @@ const routes = [
                path:'/keycaps',
                component: Keycaps,
                name:'keycaps'
+           },
+           {
+               path:'/about',
+               component: About,
+               name:'about'
+           },
+           {
+               path:'/product/:productId',
+               component: ProductDetail,
+               name:'detail'
            },
     ]
 }

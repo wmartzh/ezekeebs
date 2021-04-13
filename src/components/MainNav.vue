@@ -41,7 +41,7 @@
         </vs-navbar-item>
       </template>
     </vs-navbar-group>
-    <vs-navbar-item id="aboutus">
+    <vs-navbar-item id="aboutus" to="/about">
       <i class="bx bx-star"></i> About us
     </vs-navbar-item>
     <template #right>

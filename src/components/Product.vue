@@ -1,5 +1,5 @@
 <template>
-  <vs-card class="m-card" v-if="product">
+  <vs-card class="m-card" v-if="product" @click="goTo(product.id)">
     <template #title>
       <h3>{{ product.title }}</h3>
     </template>
@@ -30,6 +30,11 @@
 export default {
   props: {
     product: Object,
+  },
+  methods: {
+    goTo(id) {
+      this.$router.push(`/product/${id}`);
+    },
   },
 };
 </script>
