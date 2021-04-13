@@ -6,7 +6,10 @@
       </b-col>
     </b-row>
     <b-row>
-      <Product :products="products"></Product>
+      <b-col lg="4" v-cloak v-for="product in products" :key="product.id">
+        <Product :product="product"></Product>
+        <br />
+      </b-col>
     </b-row>
     <b-row>
       <b-col>
@@ -14,7 +17,10 @@
       </b-col>
     </b-row>
     <b-row>
-      <Product :products="products"></Product>
+      <b-col lg="4" v-cloak v-for="(product, index) in products" :key="index">
+        <Product v-if="index < 3" :product="product"></Product>
+        <br />
+      </b-col>
     </b-row>
     <b-row>
       <b-col>
@@ -22,92 +28,33 @@
       </b-col>
     </b-row>
     <b-row>
-      <Product :products="products"></Product>
+      <b-col lg="4" v-cloak v-for="(product,index) in products" :key="product.id">
+        <Product  v-if="index < 2" :product="product"></Product>
+        <br />
+      </b-col>
     </b-row>
   </b-container>
 </template>
 
 <script>
 import Product from "../components/Product";
+import productsFile from "../assets/groupbuys.json";
 export default {
   components: {
     Product,
   },
   data() {
     return {
-      products: [
-        {
-          title: "EZ223",
-          imgUrl:
-            "https://alitools.io/en/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHLB1XyPaUwHqK1RjSZFEq6AGMXXai%2F1-set-SA-Key-caps-PBT-Mechanical-Keyboard-Keycaps-For-Filco-Cherry-EVA-key-cap.jpg_480x480.jpg",
-          description: "Comming Soon",
-          price: "$200",
-        },
-        {
-          title: "EZ223",
-          imgUrl:
-            "https://alitools.io/en/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHLB1XyPaUwHqK1RjSZFEq6AGMXXai%2F1-set-SA-Key-caps-PBT-Mechanical-Keyboard-Keycaps-For-Filco-Cherry-EVA-key-cap.jpg_480x480.jpg",
-          description: "Comming Soon",
-          price: "$200",
-        },
-        {
-          title: "EZ223",
-          imgUrl:
-            "https://alitools.io/en/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHLB1XyPaUwHqK1RjSZFEq6AGMXXai%2F1-set-SA-Key-caps-PBT-Mechanical-Keyboard-Keycaps-For-Filco-Cherry-EVA-key-cap.jpg_480x480.jpg",
-          description: "Comming Soon",
-          price: "$200",
-        },
-        {
-          title: "EZ223",
-          imgUrl:
-            "https://alitools.io/en/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHLB1XyPaUwHqK1RjSZFEq6AGMXXai%2F1-set-SA-Key-caps-PBT-Mechanical-Keyboard-Keycaps-For-Filco-Cherry-EVA-key-cap.jpg_480x480.jpg",
-          description: "Comming Soon",
-          price: "$200",
-        },
-        {
-          title: "EZ223",
-          imgUrl:
-            "https://alitools.io/en/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHLB1XyPaUwHqK1RjSZFEq6AGMXXai%2F1-set-SA-Key-caps-PBT-Mechanical-Keyboard-Keycaps-For-Filco-Cherry-EVA-key-cap.jpg_480x480.jpg",
-          description: "Comming Soon",
-          price: "$200",
-        },
-        {
-          title: "EZ223",
-          imgUrl:
-            "https://alitools.io/en/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHLB1XyPaUwHqK1RjSZFEq6AGMXXai%2F1-set-SA-Key-caps-PBT-Mechanical-Keyboard-Keycaps-For-Filco-Cherry-EVA-key-cap.jpg_480x480.jpg",
-          description: "Comming Soon",
-          price: "$200",
-        },
-        {
-          title: "EZ223",
-          imgUrl:
-            "https://i.pinimg.com/originals/6d/78/9b/6d789b3aa8d89293dcba2c3e40945f50.jpg",
-          description: "Comming Soon",
-          price: "$200",
-        },
-        {
-          title: "EZ223",
-          imgUrl:
-            "https://i.pinimg.com/originals/6d/78/9b/6d789b3aa8d89293dcba2c3e40945f50.jpg",
-          description: "Comming Soon",
-          price: "$200",
-        },
-        {
-          title: "EZ223",
-          imgUrl:
-            "https://i.pinimg.com/originals/6d/78/9b/6d789b3aa8d89293dcba2c3e40945f50.jpg",
-          description: "Comming Soon",
-          price: "$200",
-        },
-        {
-          title: "EZ223",
-          imgUrl:
-            "https://alitools.io/en/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHLB1XyPaUwHqK1RjSZFEq6AGMXXai%2F1-set-SA-Key-caps-PBT-Mechanical-Keyboard-Keycaps-For-Filco-Cherry-EVA-key-cap.jpg_480x480.jpg",
-          description: "Comming Soon",
-          price: "$200",
-        },
-      ],
+      products: productsFile,
     };
+  },
+  mounted() {
+    // this.fetchProducts();
+  },
+  methods: {
+    async fetchProducts() {
+      console.log(productsFile);
+    },
   },
 };
 </script>

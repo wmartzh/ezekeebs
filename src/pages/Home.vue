@@ -45,7 +45,7 @@
       <vs-col vs-type="flex" vs-justify="center" vs-align="center" w="12">
         <h2>Categories</h2>
         <vs-card-group>
-          <vs-card type="3">
+          <vs-card type="3" @click="goTo('/groupbuys')">
             <template #title>
               <h3>Group Buys</h3>
             </template>
@@ -75,7 +75,8 @@
             </template>
           </vs-card>
 
-          <vs-card type="3">
+          <vs-card type="3" @click="goTo('/diy')"
+            >>
             <template #title>
               <h3>DIY Kits</h3>
             </template>
@@ -105,7 +106,8 @@
             </template>
           </vs-card>
 
-          <vs-card type="3">
+          <vs-card type="3" @click="goTo('/cases')"
+            >>
             <template #title>
               <h3>Cases</h3>
             </template>
@@ -134,14 +136,18 @@
               </vs-button>
             </template>
           </vs-card>
-          <vs-card type="3">
+          <vs-card type="3" @click="goTo('/switches')"
+            >>
             <template #title>
               <h3>Switches</h3>
             </template>
             <template #img>
-              <img height="250px" width="250px"
-              src="https://cdn.shopify.com/s/files/1/0549/2681/products/mechanical-keyboard-switches-mx-switches-1.jpg?v=1568753618"
-              alt="groupbuy" />
+              <img
+                height="250px"
+                width="250px"
+                src="https://cdn.shopify.com/s/files/1/0549/2681/products/mechanical-keyboard-switches-mx-switches-1.jpg?v=1568753618"
+                alt="groupbuy"
+              />
             </template>
             <template #text>
               <p>
@@ -160,7 +166,8 @@
               </vs-button>
             </template>
           </vs-card>
-          <vs-card type="3">
+          <vs-card type="3" @click="goTo('/keycaps')"
+            >>
             <template #title>
               <h3>Keycaps</h3>
             </template>
@@ -201,6 +208,11 @@ export default {
   component: {
     Carousel,
     Slide,
+  },
+  methods: {
+    goTo(page) {
+      this.$router.push(page);
+    },
   },
 };
 </script>

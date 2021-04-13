@@ -1,13 +1,13 @@
 <template>
-  <b-container fluid>
+  <div>
     <MainNav></MainNav>
-    <div class="container">
-      <router-view></router-view>
-    </div>
-    <MainFooter>
-
-    </MainFooter>
-  </b-container>
+    <b-container fluid>
+      <div class="container">
+        <router-view></router-view>
+      </div>
+    </b-container>
+    <MainFooter> </MainFooter>
+  </div>
 </template>
 
 <script>
@@ -17,7 +17,7 @@ import MainFooter from "../components/MainFooter";
 export default {
   components: {
     MainNav,
-    MainFooter
+    MainFooter,
   },
 };
 </script>
