@@ -2,10 +2,17 @@
   <b-container fluid>
     <b-row>
       <b-col class="text-center" sm="12">
+        <br /><br />
         <h1>About us</h1>
-
-        <img class="mx-auto d-block" height="250px" src="../assets/EZK.png"
-        alt="" />
+        <br /><br />
+        <img
+          class="mx-auto d-block"
+          height="250px"
+          src="../assets/EZK.png"
+          alt=""
+        />
+        <br />
+        <br />
         <p>
           EZKeebs is a company dedicated to the purchase and distribution of
           mechanical keyboards, keycaps, pcbs, cases, accessories and tools for
@@ -14,7 +21,8 @@
         </p>
       </b-col>
     </b-row>
-    <hr>
+    <hr />
+    <br /><br />
     <b-row>
       <b-col md="6">
         <h2>Mision</h2>
@@ -33,6 +41,12 @@
         </p>
       </b-col>
     </b-row>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
   </b-container>
 </template>
 

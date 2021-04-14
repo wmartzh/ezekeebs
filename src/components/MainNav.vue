@@ -33,12 +33,7 @@
         >
           Switches
         </vs-navbar-item>
-        <vs-navbar-item>
-          PCB
-        </vs-navbar-item>
-        <vs-navbar-item>
-          Accesories
-        </vs-navbar-item>
+   
       </template>
     </vs-navbar-group>
     <vs-navbar-item id="aboutus" to="/about">

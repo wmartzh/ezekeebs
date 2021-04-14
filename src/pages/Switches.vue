@@ -1,15 +1,41 @@
 <template>
-  <div>
-      <h1>Switches</h1>
-  </div>
+  <b-container fluid>
+    <b-row>
+      <b-col>
+        <h1>Switches</h1>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col lg="4" v-cloak v-for="(product,index) in products" :key="product.id">
+        <Product v-if="index <=10" :product="product"></Product>
+        <br />
+      </b-col>
+    </b-row>
+
+  </b-container>
 </template>
 
 <script>
+import Product from "../components/Product";
+import productsFile from "../assets/switches.json";
 export default {
-
-}
+  components: {
+    Product,
+  },
+  data() {
+    return {
+      products: productsFile,
+    };
+  },
+  mounted() {
+    // this.fetchProducts();
+  },
+  methods: {
+    async fetchProducts() {
+      console.log(productsFile);
+    },
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

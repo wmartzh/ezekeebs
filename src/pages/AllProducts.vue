@@ -2,17 +2,24 @@
   <b-container fluid>
     <h1>All Products</h1>
     <b-row>
-      <b-col lg="4" v-cloak v-for="product in products" :key="product.id">
+      <b-col
+        lg="4"
+        v-cloak
+        v-for="(product, index) in products"
+        :key="index"
+      >
         <Product :product="product"></Product>
-        <br />
+        <br>
       </b-col>
+    
     </b-row>
   </b-container>
 </template>
 
 <script>
 import Product from "../components/Product";
-import productsFile from "../assets/products.json";
+import productsFile from "../assets/all.json";
+
 export default {
   components: {
     Product,
@@ -20,6 +27,7 @@ export default {
   data() {
     return {
       products: productsFile,
+   
     };
   },
 };

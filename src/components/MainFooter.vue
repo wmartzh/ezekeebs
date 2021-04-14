@@ -1,10 +1,10 @@
 <template>
   <!-- Footer -->
-  <footer class="bg-dark text-center text-white">
+  <footer class=" top-100  bottom-0 bg-dark text-center text-white">
     <!-- Grid container -->
     <div class="container p-4">
       <!-- Section: Social media -->
-      <section class="mb-4">
+      <section class="mb-4" style="font-size:24px">
         <!-- Facebook -->
         <a href="#!" role="button">
           <i class="bx bxl-facebook"></i>
@@ -25,7 +25,7 @@
           <i class="bx bxl-linkedin"></i>
         </a>
       </section>
-<!-- 
+      <!-- 
       <section class="mb-4">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
@@ -34,7 +34,7 @@
           voluptate quas.
         </p>
       </section> -->
-    
+
       <!-- <section class="">
         <div class="row">
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
